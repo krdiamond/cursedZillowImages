@@ -1,6 +1,23 @@
 <template>
+
+<div id="testSwiper" class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+  </div>
+
+  <div class="swiper-pagination"></div>
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <div class="swiper-scrollbar"></div>
+</div>
+
+
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ msg }}</h1> 
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
