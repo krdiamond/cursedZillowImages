@@ -16,7 +16,7 @@ new Swiper(cursedImageSwiper, {
     loop: true, 
     slidesPerView: 2,
     direction: 'vertical',
-    mousewheel: true,
+    mousewheel: false,
     breakpoints: {
         900: {
           slidesPerView: 1,
