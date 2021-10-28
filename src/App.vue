@@ -9,9 +9,13 @@
       <audio autoplay><source src="./assets/scream.mp3" type="audio/mp3"></audio>
     </div>
   
+
     <div id="cursedImageSwiper" class="swiper height--100">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage02.jpeg"></div>
+            <div class="swiper-slide">
+              <div class="text">CURSED ZILLOW IMAGES</div>
+              <img class="swiper-image" src="./assets/cursed-images/cursedImage02.jpeg">
+            </div>
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage03.jpeg"></div>
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage04.jpeg"></div>
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage05.jpeg"></div>
@@ -23,9 +27,6 @@
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage11.jpeg"></div>
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage12.jpeg"></div>
         </div>
-
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
 
     </div>
 
@@ -44,8 +45,8 @@ export default {
     }
   },
   mounted() {
-    setTimeout(this.deployGhost, 25000)
-    setTimeout(this.deployScream, 24500)
+    // setTimeout(this.deployGhost, 25000)
+    // setTimeout(this.deployScream, 24500)
   },
   methods: {
     deployGhost(){
