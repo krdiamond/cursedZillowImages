@@ -1,44 +1,62 @@
 <template>
 
-    <div v-if="ghostIsActive" class="ghost">
-      <div class="text">HAPPY HALLOWEEN</div>
-      <img src="./assets/ghost.jpeg">
+    <div v-if="!ghostIsActive" class="ghost">
+      <img src="./assets/ghost.jpg">
     </div>
-
+    
     <div v-if="screamIsActive" >
       <audio autoplay><source src="./assets/scream.mp3" type="audio/mp3"></audio>
     </div>
 
-    <!-- <div class="zillow-sticker">
-      <span>Cursed Zillow Images</span>
-    </div> -->
+    <table id="ZillowModuleDesktop" v-if="!zillowModuleIsMin" v-bind:class="{ active : zillowModuleAside }" class="table--dsktp table--centered" width="499" height="327" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="4"><img src="./assets/zillow-module/desktop/zillow-module_01.jpg" width="406" height="55" alt=""></td>
+        <td colspan="2"><a href="sms:&body=checkout CursedZillowImages by Kristina Diamond 🎃👻 ~~ Happy Halloween ~~ 👻🎃  https://cursedzillowimages.herokuapp.com/"><img src="./assets/zillow-module/desktop/zillow-module_02.jpg" width="93" height="55" alt=""></a></td>
+      </tr>
+      <tr @click="minimizeZillowModule()"><td colspan="6"><img src="./assets/zillow-module/desktop/zillow-module_03.jpg" width="499" height="211" alt=""></td></tr>
+      <tr>
+        <td><img src="./assets/zillow-module/desktop/zillow-module_04.jpg" width="15" height="40" alt=""></td>
+        <td><a href="https://www.instagram.com/krdiamond"  target="_blank"><img src="./assets/zillow-module/desktop/zillow-module_05.jpg" width="229" height="40" alt=""></a></td>
+        <td><img src="./assets/zillow-module/desktop/zillow-module_06.jpg" width="9" height="40" alt=""></td>
+        <td @click="takeATour()" class="pointer" colspan="2"><img src="./assets/zillow-module/desktop/zillow-module_07.jpg" width="230" height="40" alt=""></td>
+        <td><img src="./assets/zillow-module/desktop/zillow-module_08.jpg" width="16" height="40" alt=""></td>
+      </tr>
+      <tr><td colspan="6"><img src="./assets/zillow-module/desktop/zillow-module_09.jpg" width="499" height="20" alt=""></td></tr>
+      <tr>
+        <td><img src="./assets/zillow-module/spacer.gif" width="15" height="1" alt=""></td>
+        <td><img src="./assets/zillow-module/spacer.gif" width="229" height="1" alt=""></td>
+        <td><img src="./assets/zillow-module/spacer.gif" width="9" height="1" alt=""></td>
+        <td><img src="./assets/zillow-module/spacer.gif" width="153" height="1" alt=""></td>
+        <td><img src="./assets/zillow-module/spacer.gif" width="77" height="1" alt=""></td>
+        <td><img src="./assets/zillow-module/spacer.gif" width="16" height="1" alt=""></td>
+      </tr>
+    </table> 
 
 
 
-<table v-bind:class="{ active : zillowModuleAside }" class="table--centered" width="499" height="327" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-    <td colspan="4"><img src="./assets/zillow-module/zillow-module_01.jpg" width="406" height="55" alt=""></td>
-		<td colspan="2"><a href="sms:&body=checkout CursedZillowImages by Kristina Diamond 🎃👻 ~~ Happy Halloween ~~ 👻🎃  https://cursedzillowimages.herokuapp.com/"><img src="./assets/zillow-module/zillow-module_02.jpg" width="93" height="55" alt=""></a></td>
-	</tr>
-	<tr>
-		<td colspan="6"><img src="./assets/zillow-module/zillow-module_03.jpg" width="499" height="211" alt=""></td></tr>
-	<tr>
-		<td><img src="./assets/zillow-module/zillow-module_04.jpg" width="15" height="40" alt=""></td>
-		<td><a href="https://www.instagram.com/krdiamond"><img src="./assets/zillow-module/zillow-module_05.jpg" width="229" height="40" alt=""></a></td>
-		<td><img src="./assets/zillow-module/zillow-module_06.jpg" width="9" height="40" alt=""></td>
-		<td @click="takeATour()" class="pointer" colspan="2"><img src="./assets/zillow-module/zillow-module_07.jpg" width="230" height="40" alt=""></td>
-		<td><img src="./assets/zillow-module/zillow-module_08.jpg" width="16" height="40" alt=""></td>
-	</tr>
-	<tr><td colspan="6"><img src="./assets/zillow-module/zillow-module_09.jpg" width="499" height="20" alt=""></td></tr>
-	<tr>
-		<td><img src="./assets/zillow-module/spacer.gif" width="15" height="1" alt=""></td>
-		<td><img src="./assets/zillow-module/spacer.gif" width="229" height="1" alt=""></td>
-		<td><img src="./assets/zillow-module/spacer.gif" width="9" height="1" alt=""></td>
-		<td><img src="./assets/zillow-module/spacer.gif" width="153" height="1" alt=""></td>
-		<td><img src="./assets/zillow-module/spacer.gif" width="77" height="1" alt=""></td>
-		<td><img src="./assets/zillow-module/spacer.gif" width="16" height="1" alt=""></td>
-	</tr>
-</table> 
+    <table v-bind:class="{ active : zillowModuleAside }" class="table--mbl table--centered" width="300" height="197" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="4"><img src="./assets/zillow-module/mobile/zillow-module_01.jpg" width="244" height="33" alt=""></td>
+        <td colspan="2"><a href="sms:&body=checkout CursedZillowImages by Kristina Diamond 🎃👻 ~~ Happy Halloween ~~ 👻🎃  https://cursedzillowimages.herokuapp.com/"><img src="./assets/zillow-module/mobile/zillow-module_02.jpg" width="56" height="33" alt=""></a></td>
+      </tr>
+      <tr @click="minimizeZillowModule()"><td colspan="6"><img src="./assets/zillow-module/mobile/zillow-module_03.jpg" width="300" height="126" alt=""></td></tr>
+      <tr>
+        <td><img src="./assets/zillow-module/mobile/zillow-module_04.jpg" width="10" height="25" alt=""></td>
+        <td><a href="https://www.instagram.com/krdiamond"  target="_blank"><img src="./assets/zillow-module/mobile/zillow-module_05.jpg" width="136" height="25" alt=""></a></td>
+        <td><img src="./assets/zillow-module/mobile/zillow-module_06.jpg" width="7" height="25" alt=""></td>
+        <td @click="takeATour()" class="pointer" colspan="2"><img src="./assets/zillow-module/mobile/zillow-module_07.jpg" width="137" height="25" alt=""></td>
+        <td><img src="./assets/zillow-module/mobile/zillow-module_08.jpg" width="10" height="25" alt=""></td>
+      </tr>
+      <tr><td colspan="6"><img src="./assets/zillow-module/mobile/zillow-module_09.jpg" width="300" height="12" alt=""></td></tr>
+      <tr>
+        <td><img src="./assets/zillow-module/spacer.gif" width="10" height="1" alt=""></td>
+        <td><img src="./assets/zillow-module/spacer.gif" width="136" height="1" alt=""></td>
+        <td><img src="./assets/zillow-module/spacer.gif" width="7" height="1" alt=""></td>
+        <td><img src="./assets/zillow-module/spacer.gif" width="91" height="1" alt=""></td>
+        <td><img src="./assets/zillow-module/spacer.gif" width="46" height="1" alt=""></td>
+        <td><img src="./assets/zillow-module/spacer.gif" width="10" height="1" alt=""></td>
+      </tr>
+    </table>
   
     <div id="cursedImageSwiper" class="swiper height--100">
         <div class="swiper-wrapper">
@@ -70,17 +88,19 @@ export default {
       ghostIsActive: false,
       screamIsActive: false,
       zillowModuleAside: false,
+      zillowModuleIsMin: false
     }
   },
   mounted() {
-    // setTimeout(this.deployGhost, 25000)
-    // setTimeout(this.deployScream, 24500)
+
   },
   methods: {
     takeATour() {
       const cursedImageSwiper = document.getElementById('cursedImageSwiper').swiper;
       cursedImageSwiper.mousewheel.enable();
       this.zillowModuleAside = true;
+      setTimeout(this.deployGhost, 25000)
+      setTimeout(this.deployScream, 24500)
     },
     deployGhost(){
       this.ghostIsActive = true;
@@ -88,8 +108,10 @@ export default {
     },
     deployScream(){
       this.screamIsActive = true;
-      console.log('screaming!')
     },
+    minimizeZillowModule() {
+
+    }
   }
 }
 </script>

@@ -26,7 +26,7 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     img {
         object-fit: cover;
         width: 100%;
@@ -76,7 +76,7 @@ table, .table {
     margin: auto;
     position: absolute;
     z-index: 2;
-    padding: 30px;
+    
     &--centered {
         top: 0;
         bottom: 0;
@@ -84,20 +84,34 @@ table, .table {
         left: 0;
         transition: top 2s ease;
     }
+
+    &--mbl {
+        @media (min-width: 560px) {
+            display: none;
+        }
+    }
+
+    &--dsktp {
+        @media (max-width: 560px) {
+            display: none;
+        }
+    }
+
     img {
         display: block;
     }
 }
 
-.active {
+.table--dsktp.active {
     top: unset;
     left: unset;
 }
 
+.table--mbl.active {
+    position: relative;
+}
 
-
-// .table--centered:hover {
-//     top: unset;
-//   }
-
+.floatUp {
+    top: -200px
+}
 
