@@ -133,14 +133,14 @@ export default {
       });
 
       cursedImageSwiper.on('touchStart', function () {
-        const ghost = document.getElementById('ghost');
-        setTimeout(function() {ghost.style.display = "block"}, 15000);
-        setTimeout(function() {cursedImageSwiper.mousewheel.disable();}, 15000);
+        // const ghost = document.getElementById('ghost');
+        // setTimeout(function() {ghost.style.display = "block"}, 15000);
+        // setTimeout(function() {cursedImageSwiper.mousewheel.disable();}, 15000);
 
         const scream = document.getElementById('audio');
-        setTimeout(function() {scream.play()}, 14800);
+        setTimeout(function() {scream.play()}, 2000);
 
-        cursedImageSwiper.off('slideChange')
+        cursedImageSwiper.off('touchStart')
       });
 
       this.zillowModalMinIsActive = true;
