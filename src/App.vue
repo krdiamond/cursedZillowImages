@@ -91,7 +91,7 @@
     </div>
     
     <div v-if="screamIsActive" >
-      <audio autoplay><source src="./assets/scream.mp3" type="audio/mp3"></audio>
+      <audio id="audio" controls><source src="./assets/scream.mp3" type="audio/mp3"></audio>
     </div>
 
 </template>
@@ -105,7 +105,7 @@ export default {
   data(){
     return {
       ghostIsActive: false,
-      screamIsActive: false,
+      screamIsActive: true,
       zillowModalMinIsActive: false,
       zillowModalIsBottomRight: false,
       ghostIsRelative: false
@@ -113,15 +113,26 @@ export default {
   },
   mounted() {
 
+
+
   },
   methods: {
     takeATour() {
       const cursedImageSwiper = document.getElementById('cursedImageSwiper').swiper;
       cursedImageSwiper.mousewheel.enable();
+
+      cursedImageSwiper.on('slideChange', function () {
+        const scream = document.getElementById('audio');
+        scream.play()
+      });
+
       this.zillowModalMinIsActive = true;
       this.zillowModalIsActive = false;
-      setTimeout(this.deployGhost, 15000)
-      setTimeout(this.deployScream, 14800)
+      // setTimeout(this.deployGhost, 15000)
+      // setTimeout(this.deployScream, 14800)
+      setTimeout(this.deployGhost, 5000)
+      setTimeout(this.deployScream, 4800)
+
     },
     deployGhost(){
       this.ghostIsActive = true;
