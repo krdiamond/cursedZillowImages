@@ -121,7 +121,7 @@ export default {
       const cursedImageSwiper = document.getElementById('cursedImageSwiper').swiper;
       cursedImageSwiper.mousewheel.enable();
 
-      cursedImageSwiper.on('slideChange', function () {
+      cursedImageSwiper.on('touchStart', function () {
         const scream = document.getElementById('audio');
         scream.play()
       });
