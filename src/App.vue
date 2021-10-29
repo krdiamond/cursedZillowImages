@@ -69,7 +69,7 @@
         <tr><td colspan="2"><img src="./assets/zillow-module/mobile-min/zillow-module-min_03.jpg" width="300" height="38" alt=""></td></tr>
     </table>
   
-    <div id="cursedImageSwiper" v-bind:class="{ none : ghostIsActive}" class="swiper height--100">
+    <div id="cursedImageSwiper" class="swiper height--100">
         <div id="cursedImageSwiper_Wrapper" class="swiper-wrapper">
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage02.jpeg"></div>
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage03.jpeg"></div>
@@ -90,9 +90,8 @@
       <img src="./assets/ghost-mbl.jpg" class="mobile">
     </div>
     
-    <div v-if="screamIsActive" >
-      <audio id="audio" ><source src="./assets/scream.mp3" type="audio/mp3"></audio>
-    </div>
+    <audio id="audio" controls><source src="./assets/scream.mp3" type="audio/mp3"></audio>
+
 
 </template>
 
@@ -104,11 +103,8 @@ export default {
   components: {},
   data(){
     return {
-      ghostIsActive: false,
-      screamIsActive: true,
       zillowModalMinIsActive: false,
       zillowModalIsBottomRight: false,
-      ghostIsRelative: false
     }
   },
   mounted() {
