@@ -24,4 +24,10 @@ new Swiper(cursedImageSwiper, {
     }
 });
 
+cursedImageSwiper.swiper.allowTouchMove = false;
+
+cursedImageSwiper.swiper.on('breakpoint', function () {
+  cursedImageSwiper.swiper.allowTouchMove = false;
+});
+
 
