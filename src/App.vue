@@ -90,7 +90,7 @@
       <img src="./assets/ghost-mbl.jpg" class="mobile">
     </div>
     
-    <audio id="audio" controls><source src="./assets/scream.mp3" type="audio/mp3"></audio>
+    <audio id="scream" controls><source src="./assets/scream.mp3" type="audio/mp3"></audio>
 
 
 </template>
@@ -117,26 +117,26 @@ export default {
       const cursedImageSwiper = document.getElementById('cursedImageSwiper').swiper;
       cursedImageSwiper.mousewheel.enable();
 
-      cursedImageSwiper.on('slideChange', function () {
-        const ghost = document.getElementById('ghost');
-        setTimeout(function() {ghost.style.display = "block"}, 15000);
-        setTimeout(function() {cursedImageSwiper.mousewheel.disable();}, 15000);
+      // cursedImageSwiper.on('slideChange', function () {
+      //   const ghost = document.getElementById('ghost');
+      //   setTimeout(function() {ghost.style.display = "block"}, 15000);
+      //   setTimeout(function() {cursedImageSwiper.mousewheel.disable();}, 15000);
         
-        const scream = document.getElementById('audio');
-        setTimeout(function() {scream.play()}, 14800);
+      //   const scream = document.getElementById('audio');
+      //   setTimeout(function() {scream.play()}, 14800);
 
-        cursedImageSwiper.off('slideChange')
-      });
+      //   cursedImageSwiper.off('slideChange')
+      // });
 
       cursedImageSwiper.on('touchStart', function () {
         // const ghost = document.getElementById('ghost');
         // setTimeout(function() {ghost.style.display = "block"}, 15000);
         // setTimeout(function() {cursedImageSwiper.mousewheel.disable();}, 15000);
 
-        const scream = document.getElementById('audio');
+        const scream = document.getElementById('scream');
         setTimeout(function() {scream.play()}, 2000);
 
-        cursedImageSwiper.off('touchStart')
+        // cursedImageSwiper.off('touchStart')
       });
 
       this.zillowModalMinIsActive = true;
