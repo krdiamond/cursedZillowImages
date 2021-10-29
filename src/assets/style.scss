@@ -119,14 +119,25 @@ table, .table {
 
 
 .mobile {
-    @media (min-width: 560px) {
+    @media (min-width: 678px) {
         display: none;
     }
 }
 
 .desktop {
-    @media (max-width: 560px) {
+    @media (max-width: 678px) {
         display: none;
+    }
+}
+
+.sound-on {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    z-index: 1;
+    img {
+        width: 80px;
+        height: 80px;
     }
 }
 
