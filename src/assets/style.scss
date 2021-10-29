@@ -20,6 +20,14 @@ body {
     cursor: pointer;
 }
 
+.index4 {
+    z-index: 4
+}
+
+.none {
+    display: none;
+}
+
 .ghost {
     position: absolute;
     height: 100%;
@@ -85,16 +93,9 @@ table, .table {
         transition: top 2s ease;
     }
 
-    &--mbl {
-        @media (min-width: 560px) {
-            display: none;
-        }
-    }
-
-    &--dsktp {
-        @media (max-width: 560px) {
-            display: none;
-        }
+    &--bottom-right {
+        bottom: 0;
+        right: 0;
     }
 
     img {
@@ -102,16 +103,24 @@ table, .table {
     }
 }
 
-.table--dsktp.active {
+.bottom {
     top: unset;
     left: unset;
 }
 
-.table--mbl.active {
+.top {
     position: relative;
 }
 
-.floatUp {
-    top: -200px
+.mobile {
+    @media (min-width: 560px) {
+        display: none;
+    }
+}
+
+.desktop {
+    @media (max-width: 560px) {
+        display: none;
+    }
 }
 

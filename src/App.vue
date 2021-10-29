@@ -1,14 +1,10 @@
 <template>
 
-    <div v-if="!ghostIsActive" class="ghost">
-      <img src="./assets/ghost.jpg">
-    </div>
-    
-    <div v-if="screamIsActive" >
-      <audio autoplay><source src="./assets/scream.mp3" type="audio/mp3"></audio>
-    </div>
 
-    <table id="ZillowModuleDesktop" v-if="!zillowModuleIsMin" v-bind:class="{ active : zillowModuleAside }" class="table--dsktp table--centered" width="499" height="327" border="0" cellpadding="0" cellspacing="0">
+
+
+
+    <table id="ZillowModuleDesktop" v-if="!zillowModalMinIsActive" v-bind:class="{ bottom : zillowModalIsBottomRight }" class="desktop table--centered" width="499" height="327" border="0" cellpadding="0" cellspacing="0">
       <tr>
         <td colspan="4"><img src="./assets/zillow-module/desktop/zillow-module_01.jpg" width="406" height="55" alt=""></td>
         <td colspan="2"><a href="sms:&body=checkout CursedZillowImages by Kristina Diamond 🎃👻 ~~ Happy Halloween ~~ 👻🎃  https://cursedzillowimages.herokuapp.com/"><img src="./assets/zillow-module/desktop/zillow-module_02.jpg" width="93" height="55" alt=""></a></td>
@@ -32,9 +28,16 @@
       </tr>
     </table> 
 
+    <table id="ZillowModuleDesktop-min" v-if="zillowModalMinIsActive" @click="showLargeZillowModal()" class="desktop table--bottom-right" width="499" height="118" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="./assets/zillow-module/desktop-min/zillow-module-min_01.jpg" width="406" height="55" alt=""></td>
+          <td><img src="./assets/zillow-module/desktop-min/zillow-module-min_02.jpg" width="93" height="55" alt=""></td>
+        </tr>
+        <tr><td colspan="2"><img src="./assets/zillow-module/desktop-min/zillow-module-min_03.jpg" width="499" height="63" alt=""></td></tr>
+    </table>
 
 
-    <table v-bind:class="{ active : zillowModuleAside }" class="table--mbl table--centered" width="300" height="197" border="0" cellpadding="0" cellspacing="0">
+    <table id="ZillowModuleMobile" v-if="!zillowModalMinIsActive" v-bind:class="{ top : zillowModalIsBottomRight }"  class="mobile table--centered" width="300" height="197" border="0" cellpadding="0" cellspacing="0">
       <tr>
         <td colspan="4"><img src="./assets/zillow-module/mobile/zillow-module_01.jpg" width="244" height="33" alt=""></td>
         <td colspan="2"><a href="sms:&body=checkout CursedZillowImages by Kristina Diamond 🎃👻 ~~ Happy Halloween ~~ 👻🎃  https://cursedzillowimages.herokuapp.com/"><img src="./assets/zillow-module/mobile/zillow-module_02.jpg" width="56" height="33" alt=""></a></td>
@@ -57,9 +60,17 @@
         <td><img src="./assets/zillow-module/spacer.gif" width="10" height="1" alt=""></td>
       </tr>
     </table>
+
+    <table id="ZillowModuleMobile-min" v-if="zillowModalMinIsActive" @click="showLargeZillowModal()" class="mobile top" width="300" height="71" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td><img src="./assets/zillow-module/mobile-min/zillow-module-min_01.jpg" width="244" height="33" alt=""></td>
+            <td><img src="./assets/zillow-module/mobile-min/zillow-module-min_02.jpg" width="56" height="33" alt=""></td>
+        </tr>
+        <tr><td colspan="2"><img src="./assets/zillow-module/mobile-min/zillow-module-min_03.jpg" width="300" height="38" alt=""></td></tr>
+    </table>
   
-    <div id="cursedImageSwiper" class="swiper height--100">
-        <div class="swiper-wrapper">
+    <div id="cursedImageSwiper" v-bind:class="{ none : ghostIsActive}" class="swiper height--100">
+        <div id="cursedImageSwiper_Wrapper" class="swiper-wrapper">
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage02.jpeg"></div>
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage03.jpeg"></div>
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage04.jpeg"></div>
@@ -72,7 +83,15 @@
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage11.jpeg"></div>
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage12.jpeg"></div>
         </div>
+    </div>
 
+    <div id="ghost" v-if="ghostIsActive" class="ghost">
+      <img src="./assets/ghost.jpg" class="desktop">
+      <img src="./assets/ghost-mbl.jpg" class="mobile">
+    </div>
+    
+    <div v-if="screamIsActive" >
+      <audio autoplay><source src="./assets/scream.mp3" type="audio/mp3"></audio>
     </div>
 
 </template>
@@ -87,8 +106,9 @@ export default {
     return {
       ghostIsActive: false,
       screamIsActive: false,
-      zillowModuleAside: false,
-      zillowModuleIsMin: false
+      zillowModalMinIsActive: false,
+      zillowModalIsBottomRight: false,
+      ghostIsRelative: false
     }
   },
   mounted() {
@@ -98,9 +118,10 @@ export default {
     takeATour() {
       const cursedImageSwiper = document.getElementById('cursedImageSwiper').swiper;
       cursedImageSwiper.mousewheel.enable();
-      this.zillowModuleAside = true;
-      setTimeout(this.deployGhost, 25000)
-      setTimeout(this.deployScream, 24500)
+      this.zillowModalMinIsActive = true;
+      this.zillowModalIsActive = false;
+      setTimeout(this.deployGhost, 15000)
+      setTimeout(this.deployScream, 14800)
     },
     deployGhost(){
       this.ghostIsActive = true;
@@ -109,9 +130,17 @@ export default {
     deployScream(){
       this.screamIsActive = true;
     },
+    deployFinalModal(){
+      this.ghostIsRelative = true
+    },
+    showLargeZillowModal() {
+      this.zillowModalMinIsActive = false;
+      this.zillowModalIsBottomRight = true;
+    },
     minimizeZillowModule() {
-
-    }
+      this.zillowModalMinIsActive = true;
+      this.zillowModalIsBottomRight = false;
+    },
   }
 }
 </script>

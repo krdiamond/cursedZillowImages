@@ -4,7 +4,7 @@ createApp(App).mount('#app')
 
 import './assets/style.scss';
 
-import Swiper, {Mousewheel } from 'swiper';
+import {Swiper, Mousewheel } from 'swiper';
 import 'swiper/swiper.scss';
 import 'swiper/modules/navigation/navigation.scss';
 
