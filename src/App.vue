@@ -30,7 +30,7 @@
           <td><img src="./assets/zillow-module/desktop-min/zillow-module-min_02.jpg" width="93" height="55" alt=""></td>
         </tr>
         <tr><td colspan="2"><img src="./assets/zillow-module/desktop-min/zillow-module-min_03.jpg" width="499" height="63" alt=""></td></tr>
-        <div id="dontWorry" class="hide">Don't Worry no more scaries</div>
+        <tr  id="dontWorry"><td colspan="3">Don't Worry no more scaries</td></tr>
     </table>
 
     <table id="ZillowModuleMobile-max" v-show="!zillowModalMinIsActive" class="mobile table--centered" width="300" height="197" border="0" cellpadding="0" cellspacing="0">
@@ -149,9 +149,9 @@ export default {
       cursedImageSwiper.on('touchStart', function () {
           
           //play scream for jump scare
+          document.getElementById('scream').play();
+          document.getElementById('scream').pause();
           setTimeout(function() {
-            document.getElementById('scream').play();
-            document.getElementById('scream').pause();
             document.getElementById('scream').play();
           }, 1800);
 
