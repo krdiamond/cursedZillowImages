@@ -134,7 +134,11 @@ export default {
         // setTimeout(function() {cursedImageSwiper.mousewheel.disable();}, 15000);
 
         const scream = document.getElementById('scream');
-        setTimeout(function() {scream.play()}, 2000);
+
+
+        scream.play();
+        scream.pause();
+        setTimeout(function() {scream.play();}, 2000);
 
         // cursedImageSwiper.off('touchStart')
       });
