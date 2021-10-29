@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    overflow: hidden;
 }
 
 .text {
@@ -24,8 +25,16 @@ body {
     z-index: 4
 }
 
-.none {
+.hide {
     display: none;
+}
+
+.show {
+    display: block;
+    @media (max-width: 560px) {
+        position: relative;
+    }
+
 }
 
 .ghost {
@@ -108,9 +117,6 @@ table, .table {
     left: unset;
 }
 
-.top {
-    position: relative;
-}
 
 .mobile {
     @media (min-width: 560px) {
