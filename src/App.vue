@@ -165,13 +165,13 @@ export default {
           document.getElementById('scream').pause();
           setTimeout(function() {
             document.getElementById('scream').play();
-          }, 1800);
+          }, 21800);
 
           //show the ghost for the jump scare
           setTimeout(function() {
             document.getElementById('ghost').classList.add("show");
             document.getElementById('cursedImageSwiper').style.display = "none";
-          }, 2000);
+          }, 22000);
 
           //show all modules 3 seconds after ghost
           setTimeout(function() {
@@ -185,7 +185,7 @@ export default {
             document.getElementById('ZillowModuleMobile-min').style.position = "absolute";
             document.getElementById('ZillowModuleDesktop-min__dont-worry').classList.remove('hide');
             document.getElementById('ZillowModuleMobile-min__dont-worry').classList.remove('hide');
-          }, 7000);
+          }, 27000);
       });
 
       cursedImageSwiper.on('touchStart', function () {
@@ -194,13 +194,13 @@ export default {
           document.getElementById('scream').pause();
           setTimeout(function() {
             document.getElementById('scream').play();
-          }, 1800);
+          }, 21800);
 
           //show the ghost for the jump scare
           setTimeout(function() {
             document.getElementById('ghost').classList.add("show");
             document.getElementById('cursedImageSwiper').style.display = "none";
-          }, 2000);
+          }, 22000);
 
           //show all modules 3 seconds after ghost
           setTimeout(function() {
@@ -214,7 +214,7 @@ export default {
             document.getElementById('ZillowModuleMobile-min').style.position = "absolute";
             document.getElementById('ZillowModuleDesktop-min__dont-worry').classList.remove('hide');
             document.getElementById('ZillowModuleMobile-min__dont-worry').classList.remove('hide');
-          }, 7000);
+          }, 27000);
 
       });
     },
