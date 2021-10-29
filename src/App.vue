@@ -85,13 +85,13 @@
         </div>
     </div>
 
-    <div id="ghost" v-if="ghostIsActive" class="ghost">
+    <div id="ghost" class="ghost none">
       <img src="./assets/ghost.jpg" class="desktop">
       <img src="./assets/ghost-mbl.jpg" class="mobile">
     </div>
     
     <div v-if="screamIsActive" >
-      <audio id="audio" controls><source src="./assets/scream.mp3" type="audio/mp3"></audio>
+      <audio id="audio" ><source src="./assets/scream.mp3" type="audio/mp3"></audio>
     </div>
 
 </template>
@@ -121,28 +121,31 @@ export default {
       const cursedImageSwiper = document.getElementById('cursedImageSwiper').swiper;
       cursedImageSwiper.mousewheel.enable();
 
-      cursedImageSwiper.on('touchStart', function () {
+      cursedImageSwiper.on('slideChange', function () {
+        const ghost = document.getElementById('ghost');
+        setTimeout(function() {ghost.style.display = "block"}, 15000);
+        setTimeout(function() {cursedImageSwiper.mousewheel.disable();}, 15000);
+        
         const scream = document.getElementById('audio');
-        scream.play()
+        setTimeout(function() {scream.play()}, 14800);
+
+        cursedImageSwiper.off('slideChange')
+      });
+
+      cursedImageSwiper.on('touchStart', function () {
+        const ghost = document.getElementById('ghost');
+        setTimeout(function() {ghost.style.display = "block"}, 15000);
+        setTimeout(function() {cursedImageSwiper.mousewheel.disable();}, 15000);
+
+        const scream = document.getElementById('audio');
+        setTimeout(function() {scream.play()}, 14800);
+
+        cursedImageSwiper.off('slideChange')
       });
 
       this.zillowModalMinIsActive = true;
       this.zillowModalIsActive = false;
-      // setTimeout(this.deployGhost, 15000)
-      // setTimeout(this.deployScream, 14800)
-      setTimeout(this.deployGhost, 5000)
-      setTimeout(this.deployScream, 4800)
 
-    },
-    deployGhost(){
-      this.ghostIsActive = true;
-      console.log('BOO!')
-    },
-    deployScream(){
-      this.screamIsActive = true;
-    },
-    deployFinalModal(){
-      this.ghostIsRelative = true
     },
     showLargeZillowModal() {
       this.zillowModalMinIsActive = false;
