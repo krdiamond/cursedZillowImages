@@ -90,7 +90,7 @@
       <img src="./assets/ghost-mbl.jpg" class="mobile">
     </div>
     
-    <audio id="scream" controls><source src="./assets/scream.mp3" type="audio/mp3"></audio>
+    <audio id="scream"><source src="./assets/scream.mp3" type="audio/mp3"></audio>
 
 
 </template>
@@ -117,30 +117,31 @@ export default {
       const cursedImageSwiper = document.getElementById('cursedImageSwiper').swiper;
       cursedImageSwiper.mousewheel.enable();
 
-      // cursedImageSwiper.on('slideChange', function () {
-      //   const ghost = document.getElementById('ghost');
-      //   setTimeout(function() {ghost.style.display = "block"}, 15000);
-      //   setTimeout(function() {cursedImageSwiper.mousewheel.disable();}, 15000);
+      cursedImageSwiper.on('slideChange', function () {
+        const ghost = document.getElementById('ghost');
+        const cursedImage = document.getElementById('cursedImageSwiper');
+        setTimeout(function() {ghost.style.display = "block"}, 15000);
+        setTimeout(function() {cursedImage.style.display = "none"}, 15000);
         
-      //   const scream = document.getElementById('audio');
-      //   setTimeout(function() {scream.play()}, 14800);
-
-      //   cursedImageSwiper.off('slideChange')
-      // });
-
-      cursedImageSwiper.on('touchStart', function () {
-        // const ghost = document.getElementById('ghost');
-        // setTimeout(function() {ghost.style.display = "block"}, 15000);
-        // setTimeout(function() {cursedImageSwiper.mousewheel.disable();}, 15000);
-
         const scream = document.getElementById('scream');
-
-
         scream.play();
         scream.pause();
-        setTimeout(function() {scream.play();}, 2000);
+        setTimeout(function() {scream.play()}, 14800);
 
-        // cursedImageSwiper.off('touchStart')
+        cursedImageSwiper.off('slideChange')
+      });
+
+      cursedImageSwiper.on('touchStart', function () {
+        const ghost = document.getElementById('ghost');
+        setTimeout(function() {ghost.style.display = "block"}, 15000);
+        setTimeout(function() {cursedImageSwiper.style.display = "none"}, 15000);
+
+        const scream = document.getElementById('scream');
+        scream.play();
+        scream.pause();
+        setTimeout(function() {scream.play();}, 14800);
+
+        cursedImageSwiper.off('touchStart')
       });
 
       this.zillowModalMinIsActive = true;
