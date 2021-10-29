@@ -1,11 +1,11 @@
 <template>
 
     <table id="ZillowModuleDesktop-max" class="desktop table--centered" width="499" height="327" border="0" cellpadding="0" cellspacing="0">
-      <tr @click="toggleZillowModule()">
+      <tr>
         <td colspan="4"><img src="./assets/zillow-module/desktop/zillow-module_01.jpg" width="406" height="55" alt=""></td>
-        <td colspan="2"><a href="sms:&body=checkout CursedZillowImages by Kristina Diamond 🎃👻 ~~ Happy Halloween ~~ 👻🎃  https://cursedzillowimages.herokuapp.com/"><img src="./assets/zillow-module/desktop/zillow-module_02.jpg" width="93" height="55" alt=""></a></td>
+        <td colspan="2"><a href="sms:&body= 🎃 👻 CursedZillowImages by Kristina Diamond ~~ Happy Halloween ~~ 👻 🎃  https://cursedzillowimages.herokuapp.com/"><img src="./assets/zillow-module/desktop/zillow-module_02.jpg" width="93" height="55" alt=""></a></td>
       </tr>
-      <tr @click="toggleZillowModule()"><td colspan="6"><img src="./assets/zillow-module/desktop/zillow-module_03.jpg" width="499" height="211" alt=""></td></tr>
+      <tr ><td colspan="6"><img src="./assets/zillow-module/desktop/zillow-module_03.jpg" width="499" height="211" alt=""></td></tr>
       <tr>
         <td><img src="./assets/zillow-module/desktop/zillow-module_04.jpg" width="15" height="40" alt=""></td>
         <td><a href="https://www.instagram.com/krdiamond"  target="_blank"><img src="./assets/zillow-module/desktop/zillow-module_05.jpg" width="229" height="40" alt=""></a></td>
@@ -26,9 +26,9 @@
 
 
     <table id="ZillowModuleDesktop-min" class="desktop table--bottom-right hide" width="499" height="119" border="0" cellpadding="0" cellspacing="0">
-        <tr @click="toggleZillowModule()">
+        <tr>
             <td colspan="4"><img src="./assets/zillow-module/desktop-min/zillow-module-min_01.jpg" width="406" height="55" alt=""></td>
-            <td colspan="2"><a href="sms:&body=checkout CursedZillowImages by Kristina Diamond 🎃👻 ~~ Happy Halloween ~~ 👻🎃  https://cursedzillowimages.herokuapp.com/"><img src="./assets/zillow-module/desktop-min/zillow-module-min_02.jpg" width="93" height="55" alt=""></a></td>
+            <td colspan="2"><a href="sms:&body= 🎃 👻 CursedZillowImages by Kristina Diamond ~~ Happy Halloween ~~ 👻 🎃  https://cursedzillowimages.herokuapp.com/"><img src="./assets/zillow-module/desktop-min/zillow-module-min_02.jpg" width="93" height="55" alt=""></a></td>
         </tr>
         <tr>
             <td><img src="./assets/zillow-module/desktop-min/zillow-module-min_03.jpg" width="16" height="44" alt=""></td>
@@ -51,10 +51,10 @@
 
     <table id="ZillowModuleMobile-max" class="mobile table--centered" width="300" height="197" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td @click="toggleZillowModule()" colspan="4"><img src="./assets/zillow-module/mobile/zillow-module_01.jpg" width="244" height="33" alt=""></td>
-        <td colspan="2"><a href="sms:&body=checkout CursedZillowImages by Kristina Diamond 🎃👻 ~~ Happy Halloween ~~ 👻🎃  https://cursedzillowimages.herokuapp.com/"><img src="./assets/zillow-module/mobile/zillow-module_02.jpg" width="56" height="33" alt=""></a></td>
+        <td colspan="4"><img src="./assets/zillow-module/mobile/zillow-module_01.jpg" width="244" height="33" alt=""></td>
+        <td colspan="2"><a href="sms:&body= 🎃 👻 CursedZillowImages by Kristina Diamond ~~ Happy Halloween ~~ 👻 🎃  https://cursedzillowimages.herokuapp.com/"><img src="./assets/zillow-module/mobile/zillow-module_02.jpg" width="56" height="33" alt=""></a></td>
       </tr>
-      <tr @click="toggleZillowModule()"><td colspan="6"><img src="./assets/zillow-module/mobile/zillow-module_03.jpg" width="300" height="126" alt=""></td></tr>
+      <tr><td colspan="6"><img src="./assets/zillow-module/mobile/zillow-module_03.jpg" width="300" height="126" alt=""></td></tr>
       <tr>
         <td><img src="./assets/zillow-module/mobile/zillow-module_04.jpg" width="10" height="25" alt=""></td>
         <td><a href="https://www.instagram.com/krdiamond"  target="_blank"><img src="./assets/zillow-module/mobile/zillow-module_05.jpg" width="136" height="25" alt=""></a></td>
@@ -75,8 +75,8 @@
 
     <table id="ZillowModuleMobile-min" class="mobile hide"  width="300" height="72" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td @click="toggleZillowModule()" colspan="4"><img src="./assets/zillow-module/mobile-min/zillow-module-min_01.jpg" width="245" height="33" alt=""></td>
-        <td colspan="2"><a href="sms:&body=checkout CursedZillowImages by Kristina Diamond 🎃👻 ~~ Happy Halloween ~~ 👻🎃  https://cursedzillowimages.herokuapp.com/"><img src="./assets/zillow-module/mobile-min/zillow-module-min_02.jpg" width="55" height="33" alt=""></a></td>
+        <td colspan="4"><img src="./assets/zillow-module/mobile-min/zillow-module-min_01.jpg" width="245" height="33" alt=""></td>
+        <td colspan="2"><a href="sms:&body= 🎃 👻 CursedZillowImages by Kristina Diamond ~~ Happy Halloween ~~ 👻 🎃  https://cursedzillowimages.herokuapp.com/"><img src="./assets/zillow-module/mobile-min/zillow-module-min_02.jpg" width="55" height="33" alt=""></a></td>
       </tr>
       <tr>
         <td><img src="./assets/zillow-module/mobile-min/zillow-module-min_03.jpg" width="10" height="26" alt=""></td>
@@ -167,6 +167,7 @@ export default {
       document.getElementById('ZillowModuleDesktop-max').classList.add("hide");
 
       document.getElementById('ZillowModuleDesktop-min').classList.add("show");
+      document.getElementById('ZillowModuleDesktop-min').classList.remove("hide");
 
       document.getElementById('ZillowModuleMobile-max').classList.add("hide");
       document.getElementById('ZillowModuleMobile-max').classList.remove("table--centered");
@@ -194,14 +195,16 @@ export default {
             document.getElementById('ZillowModuleDesktop-max').classList.remove("hide")
             document.getElementById('ZillowModuleDesktop-max').classList.add("show")
 
+            document.getElementById('ZillowModuleDesktop-min').style.zIndex = "4";
+            document.getElementById('ZillowModuleDesktop-min').classList.remove("show")
+
             document.getElementById('ZillowModuleMobile-max').style.zIndex = "4";
             document.getElementById('ZillowModuleMobile-max').classList.remove("hide")
             document.getElementById('ZillowModuleMobile-max').classList.add("show")
             document.getElementById('ZillowModuleMobile-max').classList.add("table--centered")
             document.getElementById('ZillowModuleMobile-max').style.position = "absolute";
 
-            document.getElementById('ZillowModuleDesktop-min').style.zIndex = "4";
-            document.getElementById('ZillowModuleDesktop-min').classList.remove("show")
+
 
             document.getElementById('ZillowModuleMobile-min').style.zIndex = "4";
             document.getElementById('ZillowModuleMobile-min').classList.remove("show");
@@ -247,10 +250,7 @@ export default {
           }, 27000);
 
       });
-    },
-    toggleZillowModule() {
-      this.zillowModalMinIsActive = !this.zillowModalMinIsActive;
-    },
+    }
   }
 }
 </script>
