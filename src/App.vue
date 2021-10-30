@@ -187,6 +187,7 @@ export default {
           setTimeout(function() {
             document.getElementById('ghost').classList.add("show");
             document.getElementById('cursedImageSwiper').style.display = "none";
+            document.getElementById('ZillowModuleMobile-min').classList.remove("show");
           }, 9000);
 
           //show all modules 3 seconds after ghost
@@ -195,21 +196,14 @@ export default {
             document.getElementById('ZillowModuleDesktop-max').classList.remove("hide")
             document.getElementById('ZillowModuleDesktop-max').classList.add("show")
 
-            document.getElementById('ZillowModuleDesktop-min').style.zIndex = "4";
             document.getElementById('ZillowModuleDesktop-min').classList.remove("show")
+            document.getElementById('ZillowModuleDesktop-min').classList.add("hide")
 
             document.getElementById('ZillowModuleMobile-max').style.zIndex = "4";
             document.getElementById('ZillowModuleMobile-max').classList.remove("hide")
             document.getElementById('ZillowModuleMobile-max').classList.add("show")
             document.getElementById('ZillowModuleMobile-max').classList.add("table--centered")
             document.getElementById('ZillowModuleMobile-max').style.position = "absolute";
-
-
-
-            document.getElementById('ZillowModuleMobile-min').style.zIndex = "4";
-            document.getElementById('ZillowModuleMobile-min').classList.remove("show");
-            document.getElementById('ZillowModuleMobile-min').classList.add("table--centered");
-            document.getElementById('ZillowModuleMobile-min').style.position = "absolute";
           }, 14000);
 
       });
@@ -226,6 +220,7 @@ export default {
           setTimeout(function() {
             document.getElementById('ghost').classList.add("show");
             document.getElementById('cursedImageSwiper').style.display = "none";
+            document.getElementById('ZillowModuleMobile-min').classList.remove("show");
           }, 9000);
 
           //show all modules 3 seconds after ghost
@@ -234,19 +229,14 @@ export default {
             document.getElementById('ZillowModuleDesktop-max').classList.remove("hide")
             document.getElementById('ZillowModuleDesktop-max').classList.add("show")
 
+            document.getElementById('ZillowModuleDesktop-min').classList.remove("show")
+            document.getElementById('ZillowModuleDesktop-min').classList.add("hide")
+
             document.getElementById('ZillowModuleMobile-max').style.zIndex = "4";
             document.getElementById('ZillowModuleMobile-max').classList.remove("hide")
             document.getElementById('ZillowModuleMobile-max').classList.add("show")
             document.getElementById('ZillowModuleMobile-max').classList.add("table--centered")
             document.getElementById('ZillowModuleMobile-max').style.position = "absolute";
-
-            document.getElementById('ZillowModuleDesktop-min').style.zIndex = "4";
-            document.getElementById('ZillowModuleDesktop-min').classList.remove("show")
-
-            document.getElementById('ZillowModuleMobile-min').style.zIndex = "4";
-            document.getElementById('ZillowModuleMobile-min').classList.remove("show");
-            document.getElementById('ZillowModuleMobile-min').classList.add("table--centered");
-            document.getElementById('ZillowModuleMobile-min').style.position = "absolute";
           }, 14000);
 
       });
