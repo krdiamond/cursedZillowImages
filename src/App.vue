@@ -180,14 +180,14 @@ export default {
           document.getElementById('scream').pause();
           setTimeout(function() {
             document.getElementById('scream').play();
-          }, 9800);
+          }, 10800);
 
           //show the ghost for the jump scare
           setTimeout(function() {
             document.getElementById('ghost').classList.add("show");
             document.getElementById('cursedImageSwiper').style.display = "none";
             document.getElementById('ZillowModuleMobile-min').classList.remove("show");
-          }, 10000);
+          }, 11000);
 
           //show all modules 3 seconds after ghost
           setTimeout(function() {
@@ -203,7 +203,7 @@ export default {
             document.getElementById('ZillowModuleMobile-max').classList.add("show")
             document.getElementById('ZillowModuleMobile-max').classList.add("table--centered")
             document.getElementById('ZillowModuleMobile-max').style.position = "absolute";
-          }, 15000);
+          }, 16000);
 
       });
 
@@ -213,14 +213,14 @@ export default {
           document.getElementById('scream').pause();
           setTimeout(function() {
             document.getElementById('scream').play();
-          }, 9800);
+          }, 10800);
 
           //show the ghost for the jump scare
           setTimeout(function() {
             document.getElementById('ghost').classList.add("show");
             document.getElementById('cursedImageSwiper').style.display = "none";
             document.getElementById('ZillowModuleMobile-min').classList.remove("show");
-          }, 10000);
+          }, 11000);
 
           //show all modules 3 seconds after ghost
           setTimeout(function() {
@@ -236,7 +236,7 @@ export default {
             document.getElementById('ZillowModuleMobile-max').classList.add("show")
             document.getElementById('ZillowModuleMobile-max').classList.add("table--centered")
             document.getElementById('ZillowModuleMobile-max').style.position = "absolute";
-          }, 15000);
+          }, 16000);
 
       });
     }
