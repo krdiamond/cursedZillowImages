@@ -101,6 +101,7 @@
   
     <div id="cursedImageSwiper" class="swiper height--100">
         <div id="cursedImageSwiper_Wrapper" class="swiper-wrapper">
+            <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage01.jpeg"></div>
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage02.jpeg"></div>
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage03.jpeg"></div>
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage04.jpeg"></div>
@@ -110,8 +111,6 @@
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage08.jpeg"></div>
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage09.jpeg"></div>
             <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage10.jpeg"></div>
-            <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage11.jpeg"></div>
-            <div class="swiper-slide"><img class="swiper-image" src="./assets/cursed-images/cursedImage12.jpeg"></div>
         </div>
     </div>
 
@@ -181,14 +180,14 @@ export default {
           document.getElementById('scream').pause();
           setTimeout(function() {
             document.getElementById('scream').play();
-          }, 8800);
+          }, 9800);
 
           //show the ghost for the jump scare
           setTimeout(function() {
             document.getElementById('ghost').classList.add("show");
             document.getElementById('cursedImageSwiper').style.display = "none";
             document.getElementById('ZillowModuleMobile-min').classList.remove("show");
-          }, 9000);
+          }, 10000);
 
           //show all modules 3 seconds after ghost
           setTimeout(function() {
@@ -204,7 +203,7 @@ export default {
             document.getElementById('ZillowModuleMobile-max').classList.add("show")
             document.getElementById('ZillowModuleMobile-max').classList.add("table--centered")
             document.getElementById('ZillowModuleMobile-max').style.position = "absolute";
-          }, 14000);
+          }, 15000);
 
       });
 
@@ -214,14 +213,14 @@ export default {
           document.getElementById('scream').pause();
           setTimeout(function() {
             document.getElementById('scream').play();
-          }, 8500);
+          }, 9800);
 
           //show the ghost for the jump scare
           setTimeout(function() {
             document.getElementById('ghost').classList.add("show");
             document.getElementById('cursedImageSwiper').style.display = "none";
             document.getElementById('ZillowModuleMobile-min').classList.remove("show");
-          }, 9000);
+          }, 10000);
 
           //show all modules 3 seconds after ghost
           setTimeout(function() {
@@ -237,7 +236,7 @@ export default {
             document.getElementById('ZillowModuleMobile-max').classList.add("show")
             document.getElementById('ZillowModuleMobile-max').classList.add("table--centered")
             document.getElementById('ZillowModuleMobile-max').style.position = "absolute";
-          }, 14000);
+          }, 15000);
 
       });
     }
